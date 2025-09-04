@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Clicker, just click</h1>
+    <button id="clickBtn" onclick="clickIncrement()">Click me!</button>
+    <p id="score">0</p>
+
+    <div>
+        <h2>Upgrades</h2>
+        <p id="cost1">Custo: 20 clicks:</p>
+        <button onclick="upgrade(clickIncrement)">click extra (+1)</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
