@@ -18,8 +18,10 @@
 
     <div>
         <h2>Upgrades</h2>
-        <p id="cost1">Custo: 20 clicks:</p>
-        <button onclick="upgrade(clickIncrement)">click extra (+1)</button>
+        <button onclick="maisclick(clickIncrement)" class="upgradebutton" price="50">click extra (+1)</button>
+        <button onclick="autoclick()" class="upgradebutton" price="1000">Auto Click</button>
+        
+        <div class="popup" id="popup"></div>
     </div>
 
     <script src="script.js"></script>

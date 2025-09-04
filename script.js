@@ -1,10 +1,4 @@
 let score = 0;
-
-        function clickIncrement(){
-            score++;
-            display.textContent = score;
-        };
-
 let clickValue = 1;
 
 function clickIncrement() {
@@ -16,12 +10,47 @@ function attScore() {
     document.getElementById('score').innerText = score;
 }
 
-function upgrade(clickIncrement) {
-    if (score >= 20) {
-        score -= 20;
+function maisclick(clickIncrement) {
+    if (score >= 50) {
+        score -= 50;
         clickValue += 1;
         attScore();
     } else {
         alert("Você não tem clicks suficientes!");
     }
+}
+
+let autoClickInterval = null;
+
+function autoclick() {  
+    if (score >= 1000) {
+        score -= 1000;
+        attScore();
+        autoClickInterval = setInterval( function() {
+            score++;
+            attScore();
+        }, 1000);
+    } else {
+        alert("voce nao tem clicks");
+    }
+}
+
+let popupTimeout;
+
+function showPopUp(element) {
+    clearTimeout(popupTimeout);
+
+    const popup = document.getElementById('popup');
+    const price = element.getAttribute('price');
+
+    popup.innerHTML = `preço: ${price} cliques`;
+
+    popup.style.top =  (event.pageY + 10) + 'px';
+    popup.style.left = (event.pageX + 10) + 'px';
+
+    popup.classList.add('visible');
+}
+
+function tchauPopUp() {
+    const popup = document.getElementById('popup');
 }

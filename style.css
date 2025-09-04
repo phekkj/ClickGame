@@ -1,0 +1,17 @@
+.popup {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1000;
+    max-width: 200px;
+    text-align: center;
+}
+
+.popup.visible {
+    opacity: 1;
+}
