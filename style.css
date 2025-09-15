@@ -1,17 +1,34 @@
-.popup {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1000;
-    max-width: 200px;
-    text-align: center;
+.upgradebutton {
+    border-radius: 50px;
+    background-color: lightcoral;
+    border-color: white;
+    padding: 5px;
+    margin-top: 10px;
 }
 
-.popup.visible {
-    opacity: 1;
+.clickBtn {
+    border-radius: 90px;
+    padding: 10px;
+    background-color: lightcoral;
+    border-color: black;
+}
+
+.content {
+    color: white;
+}
+
+.upgrades {
+    padding: 10px;
+    border: 2px solid white;
+    background-color: black;
+}
+
+#score {
+    padding: 10px;
+    border: 2px solid black;
+    width: 90px;
+    margin: 10px auto;
+    border-radius: 200px;
+    background-color: white;
+    color: black;
 }
