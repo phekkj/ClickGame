@@ -70,4 +70,4 @@ function cps() {
 }
 
 // Cps
-setInterval(cps, 100); 
+setInterval(cps, 100);
