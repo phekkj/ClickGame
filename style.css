@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #3f61e9, #85b6c9);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+    color: #3498db;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.dopamine {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: linear-gradient(90deg, #3f61e9, #85b6c9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.clickBtn {
+    background: whiter;
+    color: #2c3e50;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 250px;
+}
+
+.clickBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clickBtn:active {
+    transform: translateY(1px);
+}
+
+.dopamine p {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    color: white;
+    font-weight: 500;
+}
+
+.shop {
+    margin-top: 20px;
+}
+
+.upgrades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upgradebutton {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upgradebutton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.upgradebutton:disabled {
+    background: linear-gradient(to right, #95a5a6, #7f8c8d);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#score, #cps, #maisclickValue, #autoclick {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .clickBtn {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+}
