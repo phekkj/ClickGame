@@ -69,5 +69,5 @@ function cps() {
     }
 }
 
-// cps
+// Cps
 setInterval(cps, 100); 
