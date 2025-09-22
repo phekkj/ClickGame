@@ -120,6 +120,29 @@ h2 {
     color: #e74c3c;
 }
 
+.upgradebuttonV2 {
+    background: linear-gradient(to left, #000000, #af0505);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upgradebuttonV2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.text {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
 @media (max-width: 480px) {
     .content {
         padding: 20px;

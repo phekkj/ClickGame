@@ -13,6 +13,7 @@
                 <button class="clickBtn" onclick="clickIncrement()">Click me!</button>
                 <p>Clicks: <span id="score">0</span></p>
                 <p>CPS: <span id="cps">0</span></p>
+                <p>Rebirths: <span id="rebirths">0</span></p>
             </div>
         <div class="shop">
             <h2>Shop</h2>
@@ -20,6 +21,12 @@
                 <button onclick="maisclick(clickIncrement)" class="upgradebutton">click extra (<span id="maisclickValue">50</span> clicks)</button>
                 <button onclick="autoclick()" class="upgradebutton">Auto Click (<span id="autoclick">1000</span> clicks)</button>
             </div>
+        </div>
+        <div class="rebirth-local">
+            <h2>Rebirth</h2>
+            <button id="rebirth" class="upgradebuttonV2" onclick="rebirth()">Ascend!</button>
+            <p class="text">Para dar Rebirth voce deve atingir 1M de clicks!</p>
+            <p class="text">(Rebirths ainda nao pssuem uma funcionalidade...)</p>
         </div>
     </div>
     <script src="script.js"></script>
