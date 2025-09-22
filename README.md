@@ -1,1 +1,2 @@
-Projeto de um jogo de clicker generico, feito com HTML, CSS, e JavaScript.
+Jogo de clicker generico!
+Feito com HTML, CSS e Java script!
