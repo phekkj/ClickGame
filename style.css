@@ -157,3 +157,26 @@ h2 {
         font-size: 1.1rem;
     }
 }
+
+/* explosion effect */
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: hsl(calc(360 * var(--rand, 0.5)), 80%, 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    from {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.5);
+        opacity: 0;
+    }
+}
