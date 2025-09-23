@@ -158,7 +158,7 @@ h2 {
     }
 }
 
-/* explosion effect */
+/* explosion effect 
 
 .particle {
     position: absolute;
@@ -179,4 +179,4 @@ h2 {
         transform: translate(var(--x), var(--y)) scale(0.5);
         opacity: 0;
     }
-}
+} */

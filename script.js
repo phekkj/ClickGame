@@ -15,7 +15,7 @@ let currentCPS = 0;
 let lastUpdateTime = Date.now();    
 
 // event variables
-let explosionConst = 1000;
+// let explosionConst = 1000;
 
 function attScore() {
     document.getElementById('score').innerText = score;
@@ -41,7 +41,7 @@ setInterval(cps, 1000);
 function clickIncrement() {
     score += clickValue;
     totalClicks += clickValue;
-    if (score >= 1000) {
+    /* if (score >= 1000) {
         explosionEffect(200, 100);
     }
     if (score >= 10000) {
@@ -62,7 +62,7 @@ function clickIncrement() {
     if (score >= 1000000000) {
         explosionEffect(10000, 1000);
         alert("Parabéns! Você alcançou 1B de clicks! Você é um verdadeiro mestre dos clicks!");
-    }
+    } */
 
     attScore();
 }
