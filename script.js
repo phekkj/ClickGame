@@ -157,3 +157,89 @@ function explosionEffect(particleCount, maxDistance) {
         }, 1000);
     }
 }
+
+// Save and Load and clearSave
+const SAVE_KEY = 'clicker_save_v1';
+function saveGame() {
+    const saveData = {
+        score,
+        clickValue,
+        totalClicks,
+        autoclickSpeed,
+        autoclickValue,
+        maisclickValue,
+        rebirthCount,
+        rebirthCost,
+        autoClickActive: !!autoClickInterval,
+        savedAt: Date.now()
+    };
+
+    try {
+        localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
+        console.log('Saved!', saveData);
+    } catch (err) {
+        console.error('Error: ', err);
+    }
+}
+
+function loadGame() {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) {
+        return;
+    }
+
+    try {
+        const data = JSON.parse(raw);
+        score = Number(data.score) || 0;
+        clickValue = Number(data.clickValue) || 1;
+        totalClicks = Number(data.totalClicks) || 0;
+        autoclickSpeed = Number(data.autoclickSpeed) || 3000;
+        autoclickValue = Number(data.autoclickValue) || 1000;
+        maisclickValue = Number(data.maisclickValue) || 50;
+        rebirthCount = Number(data.rebirthCount) || 0;
+        rebirthCost = Number(data.rebirthCost) || 1000000;
+
+        attScore();
+        document.getElementById('rebirths').innerText = rebirthCount;
+        document.getElementById('rebirthCost').innerText = rebirthCost.toLocaleString();
+        document.getElementById('maisclickValue').innerText = maisclickValue;
+        document.getElementById('autoclick').innerText = autoclickValue;
+
+        if (data.autoClickActive) {
+            if (autoClickInterval) clearInterval(autoClickInterval);
+            autoClickInterval = setInterval(() => {
+                score += 1;
+                totalClicks += 1;
+                attScore();
+            }, autoclickSpeed);
+        }
+
+        lastUpdateTime = Date.now();
+        currentCPS = 0;
+        document.getElementById('cps').innerText = currentCPS.toFixed(1);
+
+    } catch (err) {
+        console.error('Error', err);
+    }
+}
+
+function clearSave() {
+    if (confirm("Are you sure you want to clear your save? This action cannot be undone.")) {
+        localStorage.removeItem(SAVE_KEY);
+        location.reload();
+    }
+}
+
+// autosave when closing or refreshing the page
+window.onbeforeunload = function() {
+    saveGame();
+};
+
+function toggleSettings() {
+    const configDiv = document.querySelector('.config');
+    if (configDiv.style.display === 'none') {
+        configDiv.style.display = 'block';
+    } else {
+        configDiv.style.display = 'none';
+    }
+}
